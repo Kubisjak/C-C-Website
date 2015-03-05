@@ -1,0 +1,192 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HowTo - TeX</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+	        
+	        <meta property="og:title" content="C&C 2015 Report">
+		<meta property="og:url" content="http://skustoinak.eu/article_latex_2.html">
+		<meta property="og:image" content="http://skustoinak.eu/images/team_skupinoveFoto.jpg">
+		<meta property="og:site_name" content="skustoinak.eu">
+		<meta property="og:type" content="article">
+		<meta property="og:description" content="Ako napísať svoj prvý dokument v LaTexe.">
+		
+		<LINK REL="shortcut icon" href="images/favicon.ico">
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollex.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="index.html">TeX</a></h1>
+				<nav id="nav">
+					<ul>
+						<!--
+                        <li><a href="index.html">Home</a></li>
+						<li>
+							<a href="">Layouts</a>
+							<ul>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li>
+									<a href="">Submenu</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+										<li><a href="#">Option 4</a></li>
+									</ul>
+							</ul>
+						</li>
+                        -->
+						<li>
+						<a href="archive.html">Archív</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			
+		<!-- Main -->
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Prvé krôčiky - píšeme v LaTeXe</h2>
+						<p>V minulom článku Vám Peťo v skratke vysvetlil, čo je to LaTex a ako sa dá nainštalovať. Dnes budeme pokračovať a skúsime sa pozrieť na základnú štruktúru nejakého dokumentu. Ukážeme si ako vyzerá základná kostra dokumentu v slovenčine a aké sú základné pravidlá pri písaní textu. </p>
+					</header>
+
+					<!-- Content -->
+						<section id="content">
+							
+							              <h3>Typ dokumentu</h3>
+							              <p align="justify">
+							              LaTex má na rozdiel od Officu väčšinou pevne definované formátovanie textu. Rozhoduje sám o tom, kde zalomí riadok, ako naformátuje Váš "obsah", kde bude nádpis kapitoly, ako bude vyzerať a podobne. Neskôr si ukážeme ako mu do toho môžete začať kecať a robiť si vlastné úpravy. Na začiatku si však vystačíme s definíciou typu dokumentu. Prvý riadok dokumentu preto vyzerá nasledovne: 
+							              </p>
+							              <p align="justify">\documentclass[a4paper,12pt]{article}</p>
+
+                            <p align="justify">
+                            Každý nový príkaz sa začína pomocou "\". V tomto prípade definuje, že jedna strana má rozmer A4, text má veľkosť 12 pt a používame formátovanie pre typ dokumentu "article." Možností je však viac. Existuje niekoľko variánt, ktoré sa líšia štýlom dokumentu, veľkosťou textu, formátovaním názvov kapitol čí sekcií a pod. Sú to napríklad: 
+                            <ul>
+                                <li>Report</li>
+                                <li>Article</li>
+                                <li>Book</li>
+                            </ul>
+                            
+							<p align="justify">
+                           Naším cieľom je, aby ste už konečne niečo napísali, takže s ostatnými možnosťami sa budeme hrať inokedy a teraz si zvolíme "article," ktorý zodpovedá najlepšie našim požiadavkom formátovania.
+                           </p>
+							
+							<h3>Jazyk dokumentu - Slovenčina</h3>
+                            
+							              <p align="justify">
+                            Náš krásny jazyk ma mnoho zapeklitých znakov, s ktorými by si editor nemusel poradiť, pretože je primárne v angličtine. Preto ho na začiatku musíme informovať, že v našom texte budeme používať mäkčene, dĺžne a pod. Jediné čo stačí urobiť je vložiť jeden príkaz pre balíček (inputec) na kódovanie v utf8 a druhý na na automatické texty v slovenčine (babel). Vyzerá to nasledovne:    
+                            </p>
+    
+                            <p align="justify">
+                            \documentclass[oneside,a4paper,12pt]{article}</br>
+                            \usepackage[utf8]{inputec} - použije balíček na kódovanie </br>
+                            \usepackage[slovak]{babel} - použije balíček na automaticky generované texty v slovenčine ("Obsah", "Kapitola"...)</br>
+                            </p>
+
+                            <h3>Poďme už niečo napísať</h3>
+                            <p align="justify">
+                            Zatiaľ sme sa venovali hlavičke dokumentu, no už by bolo fajn napísať aj nejaký text. Ako inak aj o tomto musíme editor informovať. Používa sa na to príkaz \begin{document}. Takže už máme skoro všetko. Výsledná kostra každého nášho dokumentu bude vyzerať následovne:    
+                            </p>
+                            <p align="justify">
+                            \documentclass[oneside,a4paper,12pt]{article}</br>
+                            \usepackage[utf8]{inputec} </br>
+                            \usepackage[slovak]{babel} </br>
+                            \begin{document} </br>
+                            Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... </br>
+                            \end{document} </br>
+                            
+                            Ako ste si všimli, musíme ukázať nie len kde začína náš text ale tiež kde končí. Myslím, že v tejto sekcii už máme všetko hotové a môžeme sa pustiť do písania. Pred tým však pár pravidiel: 
+                            <ul>
+                                <li>Jeden enter nevytvorí nový riadok. Koniec riadku je totižto nahradený medzerou.</li>
+                                <li>Viac medzier je vo výsledku len jedna medzera.</li>
+                                <li>Jeden alebo viac prázdnych riadkov vytvorí odsek.</li>
+                            </ul>
+                            </p>
+                            <p align="justify"><b><i>Ak ste si ešte nenaištalovali LaTex, odporúčam zaregistrovať sa na stránke <a href="www.sharelatex.com">ShareLatex</a>, kde si môžete okamžite vyskúšať všetko o čom tu budeme písať. </i></b></p>
+						                <p align="justify">
+						                Ako som uviedol na začiatku, používame typ dokumentu "article," ktorý má niekoľko vlastných príkazov. Skúste, čo robia nasledujúce:</br>
+						                \section{Kapitola}</br>
+                            \subsection{Podkapitola}</br>
+                            \subsubsection{Podpodkapitola?}</br>
+                            \paragraph{Žeby paragraf}</br>
+						                </p>
+						                <p align="justify">
+						                Musíte si to vyskúšať. naozaj to nejdem prezrádzať. Ak sa Vám pri tom nepáčia čísla, ktoré LaTex generuje, stačí použiť obmenu príkazov s "*". Napr.:</br>
+						                \section*{Kapitola}</br>
+						                </p>
+						                <p align="justify">
+						                Píšete píšete a nemôže vytvoriť nejaký odstavec? Skúste na koniec vášho odstavca doplniť "\\". Podobne vytvoríte prázdny riadok. Chceli by ste, aby nebol odsadený prvý riadok Vášho odstavca? Použite na jeho začiatku príkaz "\noindent". Ak chcete napísať niečo, čo sa nemá objaviť vo výslednom dokumente - napríklad nejaký komentár, tak použite na začiatku riadku %. 
+						                </p>
+						                <p align="justify">
+						                Myslím, že na dnes by to už stačilo. Zvyšok základného formátovania textu si necháme nabudúce. Vlastnému experimentovaniu sa medze nekladú. ShareLatex obsahuje mnoho pred pripravených šablón, do ktorých stačí už len písať. Pri narazení na neznámy príkaz pomôže prvý odkaz z google alebo niekto z nás. Takže poďme do toho! 
+						                </p>
+						                <p align="justify">
+						                Miro
+						                </p>
+						</section>
+
+				</div>
+			</div>
+			
+			<div class="content" align="center">
+								<a href="archive.html" class="button">Späť na archív</a>
+								<p></p>
+								</div>
+		
+					<!--
+                    <form method="post" action="#" class="container 50%">
+						<div class="row uniform 50%">
+							<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+							<div class="4u$ 12u$(xsmall)"><input type="submit" value="Get Started" class="fit special" /></div>
+						</div>
+					</form>
+                    -->
+				</div>
+			</section>	
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="http://www.facebook.com/workshop.cc" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="mailto:team.ccworkshop@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				
+					<!--
+					<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					-->
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+	</body>
+</html>
