@@ -84,60 +84,91 @@
                             ktorý vám zjednoduší toľko vecí (a taktiež zopár sťaží, ale nič závažné) že si ho nebudete vedieť vynachváliť a písať už nebudete chcieť v ničom inom!</p>
 							<p align="justify">Chcem podotknúť, že to čo budem opisovať ďalej v článku je LaTeX, s ktorým sa oproti TeX-u uľahčí prácu (v prípade záujimu "ako je to naozaj" sa kukni na <a href="http://en.wikipedia.org/wiki/LaTeX">LaTeX Wikipedia</a>).</p>
 
-                            <p align="justify"></br>
-                            Pre navnadenie /alebo odradenie/ tu máme rýchly "nákuk" ako LaTeX vlastne vyzerá. Špeciálne znaky sa pridávajú '\' a nejakým názvom funkcie. Normálny text sa píše bežne ako v notepade. 
-                            
-                                <img src="images/articles/latex/examples2.gif" alt=""></p>
+                            <p align="justify">Pre navnadenie /alebo odradenie/ tu máme rýchly "nákuk" ako LaTeX vlastne vyzerá. Všetko čo sa aspoň minimálne líši od bežného textu (nadpis, kapitola, tabuľka...) je do LaTeXu zadávané pomocou príkazu začínajúceho <strong>'\'</strong> a nejakým názvom funkcie. Bežný text sa píše bežne ako v notepade.<br><i>Ako ochutnávku tu máme kúsok z výskumnej úlohy Jakuba Kubu</i></p>
+							<pre>
+								<code>
+\subsection{Vyhodnotenie spektrálnych dát}
+Základom vyhodnotenia spektrálnych dát je speciačný výpočet. Je založený na výpočte spécií prítomných v roztokoch na základe známych celových
+molálnych koncentrácií šesťmocného uránu U$^{VI+}$, šesťmocného selénu Se$^{VI+}$, sedemmocného chlóru  Cl$^{VII+}$ a sodíku Na$^{I+}$, pH
+jednotlivých roztokov, ich hustoty a teploty pri ktorej boli spektrá merané. K výpočtu je nutné uvažovať na rovnice ktoré v systéme prebiehajú.
+Nami použitá rutina bola navrhnutá tak, že v úvahu berie nasledovné reakcie (rovnovážne konštanty prevzaté z prác \cite{konst} a \cite{lubal})
 
-                            <h2>Načo keď mám Word?</h2>
+\begin{table}[htbp]
+ \footnotesize
+\renewcommand{\arraystretch}{1.3}
+  \centering
+    \begin{tabular}{clcc}
+	poradové číslo & chemická reakcia & rovnovážná konštanta & log K$^\circ$    \\
+	1 & $Na^+ + SeO_4^{2-} \longleftrightarrow NaSeO_4^-$ & K$_{NaSe-}$ & - inf \\
+	2 & $2Na^+ + SeO_4^{2-} \longleftrightarrow Na_2SeO_4$ & K$_{Na2Se}$ & - inf \\
+	3 & $HSeO_4^- \longleftrightarrow H^+ + SO_4^{2-}$ & K$_{2}$ & -1,9 \\
+	4 & $UO_2^{2+} + H_2O \longleftrightarrow UO_2OH^+ + H^+$ & $\beta_{0}$ & -5,25 \\
+	5 & $UO_2^{2+} + SeO_4^{2-} \longleftrightarrow UO_2SeO_4$ & $\beta_{1}$ & 2,8 \\
+	\end{tabular}%
+\end{table}%
+
+Riešenie spočíva v riešení sústavy rovníc pre koncentrácie všetkých študovaných spécií. Táto sústava pozostáva z dvoch typov rovníc. Sú to 
+\textbf{\textit{bilančné rovnice}} a \textbf{\textit{rovnovážné rovnice}}.\\\\
+Bilančnú rovnicu možno zobecniť ako
+\begin{equation}
+c_j^m = \sum_i X_{ji} c^m_i,
+\end{equation}
+								</code>
+							</pre>
+							<p align="justify">Na prvý pohľad to môže vyzerať odpudivo, ale toto všetko sa deje aj v pozadí wordu, ibaže je to ovládateľné myškou a nevidíme na to.</p>
+                            <h2>Načo, keď mám Word?</h2>
+							<p align="justify">A tu sa dostávame k podstate vei, môžte si povedať <i>"A na čo mi to bude keď mám word?"</i> Na to vám dáme hneď niekoľko dôvodov!
                             <p align="justify">Dôvody:
                             <ul>
-                                <li>Lebo to vyzerá neskutočne dobre.</li>
-                                <li>Technické a prírodovedecké vecičky sa v tom píšu la-ho-dne.</li>
-                                <li>Nemusíte už nikdy riešiť číslovanie.</li>
+                                <li>Lebo výstup vyzerá neskutočne dobre.</li>
+                                <li>Technické a prírodovedecké vecičky sa v tom píšu <i>la-ho-dne</i>.</li>
+                                <li>Nemusíte už nikdy riešiť číslovanie a jeho úprava je proti wordu bezstarostná.</li>
+								<li>Pretože LaTeX drží formátovanie! Nikdy sa vám nestane že vďaka jednému kliku alebo pridaniu obrázku sa vám rozhádže celý dokument!</li>
                                 <li>Lebo vám to v budúcnosti MOC pomôže.</li>
                                 <li>Lebo budete vytŕčať z radu.</li>
                             </ul>
                             </p>
 							<p align="justify">
-                            P.S. - NETREBA sa toho báť. Na začiatku to vyzerá strašne, ale vyskúšate si v tom chvíľku pár vecí a zrazu to pôjde od ruky.
+                            PS: <strong>NETREBA</strong> sa toho báť. Na začiatku to vyzerá strašne, ale vyskúšate si v tom chvíľku pár vecí a zrazu to pôjde od ruky.
                             A netreba zabúdať, že vždy je tu strýko Google.</br></br>
                             Takže už vieme, že do toho chceme ísť. Ale čo pre to spraviť?</br>
                             </p>
 							
 							<h2>Quick installation quide</h2>
+							<p align="justify">LaTeX pre svoje fungovanie potrebuje dve súčasti. <strong>Systém</strong> - ten vie rozpoznať príkazy a preložiť ich do konkrétneho fotmátovania - a <strong>Editor</strong> - ten spolupracuje so sytémom a produkuje nám finálnu vizuálnu formu dokumentu, ktorá je konkrétne pre LaTeX najčastejšie .pdf.</p>
                             <h4>I. Systém</h4>
+							<p align="justify">Takže ako na inštaláciu systému? Jenoducho!</p>
 							<p align="justify">
                                 1. Stiahni si <a href="http://www.miktex.org/download">MikTeX</a>. (pozn. stačí basic)</br>
                                 2. Spusti inštaláciu.</br>
-                                -> 2.1 V okne <i>Shared installation</i> vyber možnosť <i>all users</i>.</br>
-                                -> 2.2 <i>Installation directory</i> - nechaj defaultné.</br>
-                                -> 2.3 V okne <i>Settings</i> vyber papier <i>A4</i> a <i>Install missing packages on-the-fly: Ask me first</i>.</br>
+                                -> 2.1 V okne <strong>Shared installation</strong> vyber možnosť <strong>all users</strong>.</br>
+                                -> 2.2 <strong>Installation directory</strong> - nechaj defaultné.</br>
+                                -> 2.3 V okne <strong>Settings</strong> vyber papier <strong>A4</strong> a <strong>Install missing packages on-the-fly: Ask me first</strong>.</br>
                                 3. Inštalácia dobehne.</br>
-                                4. A kedže sme slováci, tak nám treba zmeniť jazyk - <i>Language</i>.</br>
-                                -> 4.1 <i>Štart -> MiKTeX 2.9 -> Maintenance (údržba) -> Settings (nastavenia)</i>.</br>
-                                -> 4.2 <i>Languages</i> karta.</br>
-                                -> 4.3 <i>slovak</i>.</br>
-                                -> 4.4 Ostáva už len <i>OK</i>.</br>
+                                4. A kedže sme slováci, tak nám treba zmeniť jazyk - <strong>Language</strong>.</br>
+                                -> 4.1 <strong>Štart -> MiKTeX 2.9 -> Maintenance (údržba) -> Settings (nastavenia)</strong>.</br>
+                                -> 4.2 <strong>Languages</strong> karta.</br>
+                                -> 4.3 <strong>slovak</strong>.</br>
+                                -> 4.4 Ostáva už len <strong>OK</strong>.</br>
                                 5. Zopakujeme bod 4.1.</br>
-                                -> 5.1 <i>Packages</i> karta.</br>
-                                -> 5.2 <i>slovak</i>.</br>
+                                -> 5.1 <strong>Packages</strong> karta.</br>
+                                -> 5.2 <strong>slovak</strong>.</br>
                                 -> 5.3 V tomto momente potrebuješ byť pripojený na net, pretože sa budú sťahovať rôzne balíčky.</br>
-                                -> 5.4 Ostáva už len <i>OK</i>.</br>
-                                -> 5.5 Počkať a potom <i>Close</i>.</br>
+                                -> 5.4 Ostáva už len <strong>OK</strong>.</br>
+                                -> 5.5 Počkať a potom <strong>Close</strong>.</br>
                             </p>
 
                             <h4>II. Editor</h4>
                             <p align="justify">
                                 Ešte nám treba nejaký editor, aby sa nám robilo pohodlne. Kľudne si vyberte hocičo, ale ako sa vraví - v jednoduchosti je krása a mne (možno aj nám :D)
-                                sa overil <a href="http://www.xm1math.net/texmaker/download.html">Texmaker</a>.</br></br>
-                                Nebola by v tom "krása", keby netrebalo niečo nastavovať (v tomto prípade však len pre jednoduchšiu prácu s programom).</br>
+                                sa overil <a href="http://www.xm1math.net/texmaker/download.html">Texmaker</a>. Takže ťahajte cez odkaz ;)</br></br>
+                                Nebola by v tom "krása", keby netrebalo niečo nastavovať? V tomto prípade je to takmer pravda, nastavujeme len pre jednoduchšiu prácu s editorom.</br>
                                 Takže we shall begin:
                             </p>
 
                             <p align="justify">
-                                1. V samotnom Texmakery - <i>Voľby -> Nastaviť TeXmaker -> Rýchly preklad</i> a tam zaškrtnúť <i>pdfLaTeX + Zobraziť PDF</i> (týmto sa stane F1 zázračným tlačidlom na rýchly náhľad vytváraného dokumentu).</br>
-                                2. <i>Voľby -> Nastaviť TeXmaker -> Editor</i> a tam <i>Kódovanie písma</i> nastaviť na <i>windows-1250</i>.</br>
+                                1. V samotnom Texmakery - <strong>Voľby -> Nastaviť TeXmaker -> Rýchly preklad</strong> a tam zaškrtnúť <strong>pdfLaTeX + Zobraziť PDF</strong> (týmto sa stane F1 zázračným tlačidlom na rýchly náhľad vytváraného dokumentu).</br>
+                                2. <strong>Voľby -> Nastaviť TeXmaker -> Editor</strong> a tam <strong>Kódovanie písma</strong> nastaviť na <strong>windows-1250</strong>.</br>
                                 3. Reštart a je to.
                             </p>
 
@@ -157,6 +188,7 @@
                                 Ostáva už len skúšať. A keď si s niečím naozaj nebudete dať vedieť rady, tak nás kontaktujte (napr. <a href="https://www.facebook.com/workshop.cc">FB</a>) a ono sa to nejako vyrieši.
 
                             </p>
+							<p align="justify">A pretože nám naozaj záleží na tom aby ste to vyskúšali, tak <strong>v blízkej dobe prinesieme aj sériu návodov</strong> s ktorými by ste sa mali naučiť v LaTeXu písať jedna radosť!</p>
 						</section>
 
 				</div>
