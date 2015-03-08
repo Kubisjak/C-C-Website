@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Landed by HTML5 UP
 	html5up.net | @n33co
@@ -83,8 +83,9 @@
 							              <p align="justify">
 							              LaTex má na rozdiel od Officu väčšinou pevne definované formátovanie textu. Rozhoduje sám o tom, kde zalomí riadok, ako naformátuje Váš "obsah", kde bude nádpis kapitoly, ako bude vyzerať a podobne. Neskôr si ukážeme ako mu do toho môžete začať kecať a robiť si vlastné úpravy. Na začiatku si však vystačíme s definíciou typu dokumentu. Prvý riadok dokumentu preto vyzerá nasledovne: 
 							              </p>
-							              <pre><code>\documentclass[a4paper,12pt]{article}</p>
-								</code></pre>
+<pre><code>
+\documentclass[a4paper,12pt]{article}
+</code></pre>
                             <p align="justify">
                             Každý nový príkaz sa začína pomocou "\". V tomto prípade definuje, že jedna strana má rozmer A4, text má veľkosť 12 pt a používame formátovanie pre typ dokumentu "article." Možností je však viac. Existuje niekoľko variánt, ktoré sa líšia štýlom dokumentu, veľkosťou textu, formátovaním názvov kapitol čí sekcií a pod. Sú to napríklad: 
                             <ul>
@@ -103,24 +104,24 @@
                             Náš krásny jazyk ma mnoho zapeklitých znakov, s ktorými by si editor nemusel poradiť, pretože je primárne v angličtine. Preto ho na začiatku musíme informovať, že v našom texte budeme používať mäkčene, dĺžne a pod. Jediné čo stačí urobiť je vložiť jeden príkaz pre balíček (inputec) na kódovanie v utf8 a druhý na na automatické texty v slovenčine (babel). Vyzerá to nasledovne:    
                             </p>
     
-                            <pre><code>
-                            \documentclass[oneside,a4paper,12pt]{article}</br>
-                            \usepackage[utf8]{inputec} - použije balíček na kódovanie </br>
-                            \usepackage[slovak]{babel} - použije balíček na automaticky generované texty v slovenčine ("Obsah", "Kapitola"...)</br>
-                            </code></pre>
+<pre><code>
+\documentclass[oneside,a4paper,12pt]{article}</br>
+\usepackage[utf8]{inputec} - použije balíček na kódovanie </br>
+\usepackage[slovak]{babel} - použije balíček na automaticky generované texty v slovenčine ("Obsah", "Kapitola"...)</br>
+</code></pre>
 
                             <h3>Poďme už niečo napísať</h3>
                             <p align="justify">
                             Zatiaľ sme sa venovali hlavičke dokumentu, no už by bolo fajn napísať aj nejaký text. Ako inak aj o tomto musíme editor informovať. Používa sa na to príkaz \begin{document}. Takže už máme skoro všetko. Výsledná kostra každého nášho dokumentu bude vyzerať následovne:    
                             </p>
-                            <pre><code>
-                            \documentclass[oneside,a4paper,12pt]{article}</br>
-                            \usepackage[utf8]{inputec} </br>
-                            \usepackage[slovak]{babel} </br>
-                            \begin{document} </br>
-                            Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... </br>
-                            \end{document} </br>
-                            </code></pre>
+<pre><code>
+\documentclass[oneside,a4paper,12pt]{article}</br>
+\usepackage[utf8]{inputec} </br>
+\usepackage[slovak]{babel} </br>
+\begin{document} </br>
+Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... </br>
+\end{document} </br>
+</code></pre>
                             <p align="justify">
                             Ako ste si všimli, musíme ukázať nie len kde začína náš text ale tiež kde končí. Myslím, že v tejto sekcii už máme všetko hotové a môžeme sa pustiť do písania. Pred tým však pár pravidiel: 
                             <ul>
@@ -133,18 +134,18 @@
 						                <p align="justify">
 						                Ako som uviedol na začiatku, používame typ dokumentu "article," ktorý má niekoľko vlastných príkazov. Skúste, čo robia nasledujúce:</br>
 						                </p>
-						                <pre><code>
-						                \section{Kapitola}</br>
-                            					\subsection{Podkapitola}</br>
-                            					\subsubsection{Podpodkapitola?}</br>
-                            					\paragraph{Žeby paragraf}</br>
-						                </code></pre>
+<pre><code>
+\section{Kapitola}</br>
+\subsection{Podkapitola}</br>
+\subsubsection{Podpodkapitola?}</br>
+\paragraph{Žeby paragraf}</br>
+</code></pre>
 						                <p align="justify">
 						                Musíte si to vyskúšať. naozaj to nejdem prezrádzať. Ak sa Vám pri tom nepáčia čísla, ktoré LaTex generuje, stačí použiť obmenu príkazov s "*". Napr.:</br>
 						                </p>
-						                <pre><code>
-						                \section*{Kapitola}</br>
-						                </code></pre>
+<pre><code>
+\section*{Kapitola}</br>
+</code></pre>
 						                <p align="justify">
 						                Píšete píšete a nemôže vytvoriť nejaký odstavec? Skúste na koniec vášho odstavca doplniť "\\". Podobne vytvoríte prázdny riadok. Chceli by ste, aby nebol odsadený prvý riadok Vášho odstavca? Použite na jeho začiatku príkaz "\noindent". Ak chcete napísať niečo, čo sa nemá objaviť vo výslednom dokumente - napríklad nejaký komentár, tak použite na začiatku riadku %. 
 						                </p>
