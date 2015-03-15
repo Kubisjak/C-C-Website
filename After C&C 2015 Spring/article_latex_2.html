@@ -175,15 +175,30 @@ Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... <
 \footnote{tento text sa objaví pod čiarou na konci strany a automaticky sa očísluje}
 </code></pre>
 								<p>
-						                Na Začiatku Vášho textu môžete použiť niektoré na nasledujúcich príkazov:	
+						                Na Začiatku Vášho textu môžete použiť niektoré z nasledujúcich príkazov:	
 						                </p>
 <pre><code>
 \pagestyle{plain} - číslované stránky
 \pagenumbering{arabic} - stránky číslované arabskými číslicami
 \setcounter{page}{1} - nastavenie počítadla stránok na 1
 \tableofcontents - týmto príkazom sa vygeneruje obsah na začiatku dokumentu
-</code></pre>						                
-						                <p align="justify">
+</code></pre>						        <p>
+						                Na záver si ukážeme ako sa dajú vytvárať zoznamy. Prvý je nečíslovaný a druhý je číslovaný:	
+						                </p>
+<pre><code>
+\begin{itemize}
+\item Prvá položka zoznamu uvedená štandardne
+\item[$\circ$] Prvá položka zoznamu uvedená krúžkom
+\item[$\diamondsuit$] Prvá položka zoznamu uvedená "diamantom"
+\end{itemize}
+</code></pre>					
+<pre><code>
+\begin{enumerate}
+\item Prvá položka zoznamu uvedená číslom 
+\item[$\infty$.] Aj tu môžete nahradiť uvádzacie číslom v podstate čímkoľvek
+\end{enumerate}
+</code></pre>						        
+								<p align="justify">
 						                Myslím, že na dnes by to už stačilo. Kód, ktorý sme doteraz použili si v ShareLaTeXe môžete pozrieť <a href="https://www.sharelatex.com/project/54f78c5adb9189674cd4774c">TU</a>. Nabudúce Vám Kubo vysvetlí ako sa do textu dajú vkladať obrázky. Vlastnému experimentovaniu sa medze nekladú. ShareLatex obsahuje mnoho pred pripravených šablón, do ktorých stačí už len písať. Pri narazení na neznámy príkaz pomôže prvý odkaz z google alebo niekto z nás. Takže poďme do toho! 
 						                </p>
 						                <p align="justify">
