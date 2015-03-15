@@ -72,7 +72,7 @@
 			<div id="main" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-						<h2>Prvé krôčiky - píšeme v LaTeXu</h2>
+						<h2>Prvé krôčiky - formátovanie textu s LaTeXom</h2>
 						<p>V minulom článku Vám Peťo v skratke vysvetlil, čo je to LaTex a ako sa dá nainštalovať. Dnes budeme pokračovať a skúsime sa pozrieť na základnú štruktúru nejakého dokumentu. Ukážeme si ako vyzerá základná kostra dokumentu v slovenčine a aké sú základné pravidlá pri písaní textu. </p>
 					</header>
 
@@ -89,9 +89,10 @@
                             <p align="justify">
                             Každý nový príkaz sa začína pomocou "\". V tomto prípade definuje, že jedna strana má rozmer A4, text má veľkosť 12 pt a používame formátovanie pre typ dokumentu "article." Možností je však viac. Existuje niekoľko variánt, ktoré sa líšia štýlom dokumentu, veľkosťou textu, formátovaním názvov kapitol čí sekcií a pod. Sú to napríklad: 
                             <ul>
-                                <li>Report</li>
-                                <li>Article</li>
-                                <li>Book</li>
+                                <li>Report - skriptá, diplomové práce</li>
+                                <li>Article - články, seminárky, manuály</li>
+                                <li>Book - knihy</li>
+                                <li>Letter - dopisy</li>
                             </ul>
                             
 							<p align="justify">
@@ -138,7 +139,15 @@ Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... <
 \section{Kapitola}</br>
 \subsection{Podkapitola}</br>
 \subsubsection{Podpodkapitola?}</br>
-\paragraph{Žeby paragraf}</br>
+\paragraph{Paragraf}</br>
+\subparagraph{Podsekcia paragrafu}
+</code></pre>
+						                <p align="justify">
+						                Pre iné typy dokumentov ešte existujú príkazy:</br>
+						                </p>
+<pre><code>
+\part{názov}</br>
+\chapter{názov}</br>
 </code></pre>
 						                <p align="justify">
 						                Musíte si to vyskúšať. naozaj to nejdem prezrádzať. Ak sa Vám pri tom nepáčia čísla, ktoré LaTex generuje, stačí použiť obmenu príkazov s "*". Napr.:</br>
@@ -150,7 +159,32 @@ Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... <
 						                Píšete píšete a nemôže vytvoriť nejaký odstavec? Skúste na koniec vášho odstavca doplniť "\\". Podobne vytvoríte prázdny riadok. Chceli by ste, aby nebol odsadený prvý riadok Vášho odstavca? Použite na jeho začiatku príkaz "\noindent". Ak chcete napísať niečo, čo sa nemá objaviť vo výslednom dokumente - napríklad nejaký komentár, tak použite na začiatku riadku %. 
 						                </p>
 						                <p align="justify">
-						                Myslím, že na dnes by to už stačilo. Kód, ktorý sme doteraz použili si v ShareLaTeXe môžete pozrieť <a href="https://www.sharelatex.com/project/54f78c5adb9189674cd4774c">TU</a>. Zvyšok základného formátovania textu si necháme nabudúce. Vlastnému experimentovaniu sa medze nekladú. ShareLatex obsahuje mnoho pred pripravených šablón, do ktorých stačí už len písať. Pri narazení na neznámy príkaz pomôže prvý odkaz z google alebo niekto z nás. Takže poďme do toho! 
+						                V tomto momente už začínane písať vlastný text a k tomu sa hodí niekoľko poznámok o jeho základných úpravách:
+						                </p>
+						                
+<pre><code>
+{\bf tento text je napísaný tučným písmom}</br>
+{\it tento text je napísaný kurzívou}</br>
+{\small tento text je napísaný menším písmom 9pt}</br>
+{\normalsize tento text je napísaný normálnym písmom 10pt}</br>
+{\large tento text je napísaný väčším písmom 12pt}</br>
+{\Large tento text je napísaný väčším písmom 14pt}</br>
+{\LARGE tento text je napísaný väčším písmom 17pt}</br>
+{\huge tento text je napísaný veľkým písmom 20pt}</br>
+{\Huge tento text je napísaný veľkým písmom 25pt}</br>
+\footnote{tento text sa objaví pod čiarou na konci strany a automaticky sa očísluje}
+</code></pre>
+								<p>
+						                Na Začiatku Vášho textu môžete použiť niektoré na nasledujúcich príkazov:	
+						                </p>
+<pre><code>
+\pagestyle{plain} - číslované stránky
+\pagenumbering{arabic} - stránky číslované arabskými číslicami
+\setcounter{page}{1} - nastavenie počítadla stránok na 1
+\tableofcontents - týmto príkazom sa vygeneruje obsah na začiatku dokumentu
+</code></pre>						                
+						                <p align="justify">
+						                Myslím, že na dnes by to už stačilo. Kód, ktorý sme doteraz použili si v ShareLaTeXe môžete pozrieť <a href="https://www.sharelatex.com/project/54f78c5adb9189674cd4774c">TU</a>. Nabudúce Vám Kubo vysvetlí ako sa do textu dajú vkladať obrázky. Vlastnému experimentovaniu sa medze nekladú. ShareLatex obsahuje mnoho pred pripravených šablón, do ktorých stačí už len písať. Pri narazení na neznámy príkaz pomôže prvý odkaz z google alebo niekto z nás. Takže poďme do toho! 
 						                </p>
 						                <p align="justify">
 						                Miro
