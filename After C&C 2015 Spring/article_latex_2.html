@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <!--
 	Landed by HTML5 UP
 	html5up.net | @n33co
@@ -13,7 +13,7 @@
 	        
 	        <meta property="og:title" content="Prvé krôčiky - píšeme v LaTeXu">
 		<meta property="og:url" content="http://skustoinak.eu/article_latex_2.html">
-		<meta property="og:image" content="http://skustoinak.eu/images/team_skupinoveFoto.jpg">
+		<meta property="og:image" content="http://skustoinak.eu/images/articles/latex_2/fb_thumbnail.png">
 		<meta property="og:site_name" content="skustoinak.eu">
 		<meta property="og:type" content="article">
 		<meta property="og:description" content="Ako napísať svoj prvý dokument v LaTeXu.">
@@ -72,8 +72,8 @@
 			<div id="main" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-						<h2>Prvé krôčiky - píšeme v LaTeXu</h2>
-						<p>V minulom článku Vám Peťo v skratke vysvetlil, čo je to LaTex a ako sa dá nainštalovať. Dnes budeme pokračovať a skúsime sa pozrieť na základnú štruktúru nejakého dokumentu. Ukážeme si ako vyzerá základná kostra dokumentu v slovenčine a aké sú základné pravidlá pri písaní textu. </p>
+						<h2>Prvé krôčiky - formátovanie textu s LaTeXom</h2>
+						<p>V <a href="article_latex.html">minulom článku</a> Vám Peťo v skratke vysvetlil, čo je to LaTeX a ako sa dá nainštalovať. Dnes budeme pokračovať a skúsime sa pozrieť na základnú štruktúru nejakého dokumentu. Ukážeme si ako vyzerá základná kostra dokumentu v slovenčine a aké sú základné pravidlá pri písaní textu. </p>
 					</header>
 
 					<!-- Content -->
@@ -81,7 +81,7 @@
 							
 							              <h3>Typ dokumentu</h3>
 							              <p align="justify">
-							              LaTex má na rozdiel od Officu väčšinou pevne definované formátovanie textu. Rozhoduje sám o tom, kde zalomí riadok, ako naformátuje Váš "obsah", kde bude nádpis kapitoly, ako bude vyzerať a podobne. Neskôr si ukážeme ako mu do toho môžete začať kecať a robiť si vlastné úpravy. Na začiatku si však vystačíme s definíciou typu dokumentu. Prvý riadok dokumentu preto vyzerá nasledovne: 
+							              LaTeX má na rozdiel od Officu väčšinou pevne definované formátovanie textu. Rozhoduje sám o tom, kde zalomí riadok, ako naformátuje Váš "obsah", kde bude nádpis kapitoly, ako bude vyzerať a podobne. Neskôr si ukážeme ako mu do toho môžete začať kecať a robiť si vlastné úpravy. Na začiatku si však vystačíme s definíciou typu dokumentu. Prvý riadok dokumentu preto vyzerá nasledovne: 
 							              </p>
 <pre><code>
 \documentclass[a4paper,12pt]{article}
@@ -89,9 +89,10 @@
                             <p align="justify">
                             Každý nový príkaz sa začína pomocou "\". V tomto prípade definuje, že jedna strana má rozmer A4, text má veľkosť 12 pt a používame formátovanie pre typ dokumentu "article." Možností je však viac. Existuje niekoľko variánt, ktoré sa líšia štýlom dokumentu, veľkosťou textu, formátovaním názvov kapitol čí sekcií a pod. Sú to napríklad: 
                             <ul>
-                                <li>Report</li>
-                                <li>Article</li>
-                                <li>Book</li>
+                                <li>Report - skriptá, diplomové práce</li>
+                                <li>Article - články, seminárky, manuály</li>
+                                <li>Book - knihy</li>
+                                <li>Letter - dopisy</li>
                             </ul>
                             
 							<p align="justify">
@@ -138,7 +139,15 @@ Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... <
 \section{Kapitola}</br>
 \subsection{Podkapitola}</br>
 \subsubsection{Podpodkapitola?}</br>
-\paragraph{Žeby paragraf}</br>
+\paragraph{Paragraf}</br>
+\subparagraph{Podsekcia paragrafu}
+</code></pre>
+						                <p align="justify">
+						                Pre iné typy dokumentov ešte existujú príkazy:</br>
+						                </p>
+<pre><code>
+\part{názov}</br>
+\chapter{názov}</br>
 </code></pre>
 						                <p align="justify">
 						                Musíte si to vyskúšať. naozaj to nejdem prezrádzať. Ak sa Vám pri tom nepáčia čísla, ktoré LaTex generuje, stačí použiť obmenu príkazov s "*". Napr.:</br>
@@ -150,8 +159,132 @@ Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... <
 						                Píšete píšete a nemôže vytvoriť nejaký odstavec? Skúste na koniec vášho odstavca doplniť "\\". Podobne vytvoríte prázdny riadok. Chceli by ste, aby nebol odsadený prvý riadok Vášho odstavca? Použite na jeho začiatku príkaz "\noindent". Ak chcete napísať niečo, čo sa nemá objaviť vo výslednom dokumente - napríklad nejaký komentár, tak použite na začiatku riadku %. 
 						                </p>
 						                <p align="justify">
-						                Myslím, že na dnes by to už stačilo. Kód, ktorý sme doteraz použili si v ShareLaTeXe môžete pozrieť <a href="https://www.sharelatex.com/project/54f78c5adb9189674cd4774c"></a>TU</a>. Zvyšok základného formátovania textu si necháme nabudúce. Vlastnému experimentovaniu sa medze nekladú. ShareLatex obsahuje mnoho pred pripravených šablón, do ktorých stačí už len písať. Pri narazení na neznámy príkaz pomôže prvý odkaz z google alebo niekto z nás. Takže poďme do toho! 
+						                V tomto momente už začínane písať vlastný text a k tomu sa hodí niekoľko poznámok o jeho základných úpravách:
 						                </p>
+						                
+<pre><code>
+{\bf tento text je napísaný tučným písmom}</br>
+{\it tento text je napísaný kurzívou}</br>
+{\small tento text je napísaný menším písmom 9pt}</br>
+{\normalsize tento text je napísaný normálnym písmom 10pt}</br>
+{\large tento text je napísaný väčším písmom 12pt}</br>
+{\Large tento text je napísaný väčším písmom 14pt}</br>
+{\LARGE tento text je napísaný väčším písmom 17pt}</br>
+{\huge tento text je napísaný veľkým písmom 20pt}</br>
+{\Huge tento text je napísaný veľkým písmom 25pt}</br>
+\footnote{tento text sa objaví pod čiarou na konci strany a automaticky sa očísluje}
+</code></pre>
+								<p>
+						                Na Začiatku Vášho textu môžete použiť niektoré z nasledujúcich príkazov:	
+						                </p>
+<pre><code>
+\pagestyle{plain} - číslované stránky
+\pagenumbering{arabic} - stránky číslované arabskými číslicami
+\setcounter{page}{1} - nastavenie počítadla stránok na 1
+\tableofcontents - týmto príkazom sa vygeneruje obsah na začiatku dokumentu
+</code></pre>						        <p>
+						                Na záver si ukážeme ako sa dajú vytvárať zoznamy. Prvý je nečíslovaný a druhý je číslovaný:	
+						                </p>
+<pre><code>
+\begin{itemize}
+\item Prvá položka zoznamu uvedená štandardne
+\item[$\circ$] Prvá položka zoznamu uvedená krúžkom
+\item[$\diamondsuit$] Prvá položka zoznamu uvedená "diamantom"
+\end{itemize}
+</code></pre>					
+<pre><code>
+\begin{enumerate}
+\item Prvá položka zoznamu uvedená číslom 
+\item[$\infty$.] Aj tu môžete nahradiť uvádzacie číslom v podstate čímkoľvek
+\end{enumerate}
+</code></pre>						        
+								<p align="justify">
+						                Myslím, že na dnes by to už stačilo. <a href="https://www.sharelatex.com/project/54f78c5adb9189674cd4774c">Kód, ktorý sme doteraz použili si v ShareLaTeXe môžete pozrieť tu</a>. Nabudúce Vám Kubo vysvetlí ako sa do textu dajú vkladať obrázky. Vlastnému experimentovaniu sa medze nekladú. ShareLatex obsahuje mnoho pred pripravených šablón, do ktorých stačí už len písať. Pri narazení na neznámy príkaz pomôže prvý odkaz z google alebo niekto z nás. Takže poďme do toho! 
+						                </p>
+<p align="justify">Tak a tu je kód celého tohto cvičenia pre tých ktorý boli dostatočne odvážni a LaTeX si nainštalovali.
+</p>
+<pre><code>
+\documentclass[a4paper,12pt]{article}  %
+\usepackage[utf8]{inputenc}            %
+\usepackage[slovak]{babel}             %
+\begin{document}                       %
+
+\tableofcontents %Generuje obsah dokumentu
+\newpage         %Text pokračuje na novej stránke
+
+Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... 
+Napríklad také medzery        to tu nemajú vôbec ľahké. Je ich osem, no v skutočnosti jedna. 
+
+\section{Kapitola}
+
+\noindent Tento riadok nie je odsadený.
+
+Tento riadok je odsadený.
+
+Medzi predchádzajúcimi vetami je prázdny riadok. Vo výsledku sme tak vytvorili text v novom riadku.
+Keď to spojíme s predchádzajúcim tvrdením o medzerách...
+Tak
+                          sa         aj takýto
+    text       nakoniec      nachádza
+v jednej                                 vete. 
+Ak chcete vytvoriť prázdny riadok, musíte použiť tento znak \\ na jeho konci. \\
+
+%Tento riadok je komentár. Vo výslednom dokumente sa neobjaví. 
+
+\noindent Pozrime sa na ďalšie príkazy pre členenie textu: \\
+
+\subsection{Podkapitola}
+\subsubsection{Podpodkapitola?}
+\paragraph{Paragraf}
+\subparagraph{Subparagraf}
+
+\section{Základné úpravy textu} 
+
+Príkazy, ktoré môžete jednoducho vložiť do textu, na jeho následnú úpravu.\\
+
+{\bf tento text je napísaný tučným písmom}
+
+{\it tento text je napísaný kurzívou}
+
+{\small tento text je napísaný menším písmom 9pt}
+
+{\normalsize tento text je napísaný normálnym písmom 10pt}
+
+{\large tento text je napísaný väčším písmom 12pt}
+
+{\Large tento text je napísaný väčším písmom 14pt}
+
+{\LARGE tento text je napísaný väčším písmom 17pt}
+
+{\huge tento text je napísaný veľkým písmom 20pt}
+
+{\Huge tento text je napísaný veľkým písmom 25pt}
+
+Text, na ktorý sa odkazuje poznámka pod čiarou \footnote{tento text sa objaví pod čiarou na konci strany a automaticky sa očísluje}
+
+
+\newpage
+\section{Zoznamy}
+
+\noindent Nečíslovaný zoznam: \\
+
+\begin{itemize}
+\item Prvá položka zoznamu uvedená štandardne
+\item[$\circ$] Prvá položka zoznamu uvedená krúžkom
+\item[$\diamondsuit$] Prvá položka zoznamu uvedená "diamantom"
+\end{itemize}
+
+\noindent Číslovaný zoznam:\\
+
+\begin{enumerate}
+\item Prvá položka zoznamu uvedená číslom 
+\item Druhá položka zoznamu uvedená číslom 
+\item[$\infty$.] Aj tu môžete nahradiť uvádzacie číslom v podstate čímkoľvek
+\end{enumerate}
+
+
+\end{document}
+</code></pre>
 						                <p align="justify">
 						                Miro
 						                </p>
@@ -196,3 +329,4 @@ Samotný text práce - miesto, kde môžete písať, čo len chcete. Takmer... <
 
 	</body>
 </html>
+	
