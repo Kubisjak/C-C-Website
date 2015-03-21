@@ -1,0 +1,144 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HowTo - TeX - Part 3</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+	        
+	        <meta property="og:title" content="Vypimpuj svoj dokument obrázkami">
+		<meta property="og:url" content="http://skustoinak.eu/article_latex_3.html">
+		<meta property="og:image" content="http://skustoinak.eu/images/articles/latex_3/fb_thumbnail.png">
+		<meta property="og:site_name" content="skustoinak.eu">
+		<meta property="og:type" content="article">
+		<meta property="og:description" content="Vkladanie obrázkov v LaTeXu.">
+		
+		<LINK REL="shortcut icon" href="images/favicon.ico">
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollex.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="index.html">C&C</a></h1>
+				<nav id="nav">
+					<ul>
+						<!--
+                        <li><a href="index.html">Home</a></li>
+						<li>
+							<a href="">Layouts</a>
+							<ul>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li>
+									<a href="">Submenu</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+										<li><a href="#">Option 4</a></li>
+									</ul>
+							</ul>
+						</li>
+                        -->
+						<li>
+						<a href="archive.html">Archív</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			
+		<!-- Main -->
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Vypimpuj svoj dokument obrázkami!</h2>
+						<p>Miro v <a href="article_latex2.html">minulom článku</a> krásne vysvetlil ako sa k LaTeXu správať aby Vás poslúchal a formátoval text tak, ako si prajete. Dnes sa pozrieme na to, ako pridávať do dokumentov obrázky!</p>
+					</header>
+
+					<!-- Content -->
+						<section id="content">
+							<h3>Aj obrázky môžu byť veda</h3>
+							<p align="justify">
+							Než prejdeme k samotnému vkladaniu, povedzme si pár viet o tom ako sa v informačných / odborných správne pracuje s obrázkami. Aby som to nepredlžoval - existuje súbor zaužívaných pravidiel pre obrázky. Naozaj podstatné sú asi dva. Tým najdôležitejším je, že pod každým obrázkom musí byť <strong>popisok</strong> (anglicky <i>caption</i>) a tým  druhým je, že <strong>jedna strana by nemala obsahovať viac ako dva obrázky</strong>, pričom obrázky zaberajú <strong>celú šírku strany</strong>.<br>Vyzbrojení touto znalosťou sa môžme vrhnúť do píísania!</p>
+						    <h3>Príprava je polka úspechu</h3>
+							<p align="justify">
+						    Začnime tým, že si zoberieme pekne predefinovaný dokument podľa Mircovho návodu. Samotný LaTeX však nie je schopný obrázky zvládať ale existuje rada packageov ktoré to dokážu. Ja používam <i>graphicx</i>. Aby sme ho mohli používať stačí si ho pridať do úvodnej deklarácie.</p>
+<pre><code>
+\documentclass[a4paper,12pt]{article}  
+\usepackage[utf8]{inputenc}            
+\usepackage[slovak]{babel}
+<strong>\usepackage{graphicx}</strong>
+\begin{document}                       
+
+\end{document}
+</code></pre>
+							<h3>3, 2, 1...Obrázky!</h3>
+							<p align="justify">
+							Píšete píšete a nemôže vytvoriť nejaký odstavec? Skúste na koniec vášho odstavca doplniť "\\". Podobne vytvoríte prázdny riadok. Chceli by ste, aby nebol odsadený prvý riadok Vášho odstavca? Použite na jeho začiatku príkaz "\noindent". Ak chcete napísať niečo, čo sa nemá objaviť vo výslednom dokumente - napríklad nejaký komentár, tak použite na začiatku riadku %. 
+							</p>
+							<p align="justify">
+							Jakub
+						    </p>
+						</section>
+
+				</div>
+			</div>
+			
+			<div class="content" align="center">
+								<a href="archive.html" class="button">Späť na archív</a>
+								<p></p>
+								</div>
+		
+					<!--
+                    <form method="post" action="#" class="container 50%">
+						<div class="row uniform 50%">
+							<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+							<div class="4u$ 12u$(xsmall)"><input type="submit" value="Get Started" class="fit special" /></div>
+						</div>
+					</form>
+                    -->
+				</div>
+			</section>	
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="http://www.facebook.com/workshop.cc" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="mailto:team.ccworkshop@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				
+					<!--
+					<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					-->
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+	</body>
+</html>
+	
