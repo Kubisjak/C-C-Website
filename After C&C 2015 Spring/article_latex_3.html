@@ -74,7 +74,8 @@
 					<header class="major">
 						<h2>Vypimpuj svoj dokument obrázkami!</h2>
 						<p>Miro v <a href="article_latex2.html">minulom článku</a> krásne vysvetlil ako sa k 
-						LaTeXu správať aby Vás poslúchal a formátoval text tak, ako si prajete. Písanie máme zvládnuté ale každému je jasné že obraz vydá za tisíc slov, takže dnes sa pozrieme 
+						LaTeXu správať aby Vás poslúchal a formátoval text tak, ako si prajete. Písanie máme 
+                        zvládnuté ale každému je jasné, že obraz vydá za tisíc slov, takže dnes sa pozrieme 
 						na to, ako pridávať do dokumentov obrázky!
 						</p>
 					</header>
@@ -84,12 +85,12 @@
 						<h3>Aj obrázky môžu byť veda</h3>
 						<p align="justify">
 						Než prejdeme k samotnému vkladaniu, povedzme si pár viet o tom ako sa v informačných / 
-						odborných správne pracuje s obrázkami. Aby som to nepredlžoval - existuje súbor zaužívaných 
+						odborných textoch správne pracuje s obrázkami. Aby som to nepredlžoval - existuje súbor zaužívaných 
 						pravidiel pre obrázky. Naozaj podstatné sú asi dva. Tým najdôležitejším je, že pod každým 
 						obrázkom musí byť <strong>popisok</strong> (anglicky <i>caption</i>) a tým  druhým je, že 
 						<strong>jedna strana by nemala obsahovať viac ako dva obrázky</strong>, pričom obrázky zaberajú 
 						<strong>celú šírku strany</strong>. Nič sa však nebojte, o toto všetko sa LaTeX dokáže postarať 
-						takmer sám.<br>Vyzbrojení touto znalosťou sa môžme vrhnúť do píísania!
+						takmer sám.<br>Vyzbrojení touto znalosťou sa môžme vrhnúť do písania!
 						</p>
 						
 						<h3>Akú awesome vec budete schopní spraviť keď si prečítate tento návod?</h3>
@@ -108,11 +109,13 @@
 						<p align="justify">
 						Pozrime sa na to čo cheme v tejto časti dosiahnuť. Pôjde o absoútny základ - vloženie jedného 
 						obrázku zaberajúceho celú šírku strany a vloženie popisku. Vyzerať by to malo zhruba takto.</p>
-						<div align="center">	<img class="image"src="images/articles/latex_3/fb_thumbnail.png" alt="Jeden obrázok na šírke strany" />	</div>
+						<div align="center">
+                        	<img class="image"src="images/articles/latex_3/single.png" alt="Jeden obrázok na šírke strany" />
+                        </div>
 						<h4>Ako na to?</h4>
-						Začnime tým, že si zoberieme pekne predefinovaný dokument podľa Mircovho návodu. Samotný LaTeX 
+						Začnime tým, že si zoberieme pekne preddefinovaný dokument podľa Mircovho návodu. Samotný LaTeX 
 						však nie je schopný obrázky zvládať ale existuje rada packageov ktoré to dokážu. Ja používam 
-						<i>graphicx</i>. Aby sme ho mohli používať stačí si ho pridať do úvodnej deklarácie.</p>
+						<strong>graphicx</strong>. Aby sme ho mohli používať stačí si ho pridať do úvodnej deklarácie.</p>
 <pre><code>
 \documentclass[a4paper,12pt]{article}  
 \usepackage[utf8]{inputenc}            
@@ -128,19 +131,138 @@
 						mal takúto <strong>veľkosť</strong>" a takýto <strong>popisok</strong>."<br>
 						Všimnite si, že nikde neuvádzame, kde sa obrázok nachádza. Je tomu tak preto, lebo LaTeX
 						predpokladá, že <strong>obrázok sa nachádza v zložke v ktorej máme uložený .tex súbor 
-						zdrojového kôdu dokumentu</strong>. Takže ho tam musíme mať. Taktiež nehovoríme nič o formáte
+						zdrojového kódu dokumentu</strong>. Takže ho tam musíme mať. Taktiež nehovoríme nič o formáte
 						v ktorom je obrázok uložený ale <i>graphicx</i> zvláda všetky základné obrázky ako <i>.jpg</i>,
 						<i>.png</i>, <i>.bmp</i>...<br><br>
-						Takže ako to povedať tak aby LaTeX rozumel? Pre vloženie obrázku používame
+						Takže ako to povedať tak aby LaTeX rozumel? Jednoducho! Najprv musíme povedať, že chceme vyhradiť
+                        priestor na obrázok. To spravíme nasledovne.
+<pre><code>
+<strong>\begin{figure}[htbp]
+
+\end{figure}</strong>
+</code></pre>
+						Pozornosť však treba venovať hranatým zátvorkám v ktorých hovoríme kam má byť obrázok zarovnaný.
+                        <ul>
+                        <li><strong>h</strong> - <i>here</i> - zarovná obrázok za vetu za ktorou sa nachádza príkaz na 
+                        vkladanie obrázku.</li>
+                        <li><strong>t</strong> - <i>top</i> - zarovná obrázok na začiatok strany.</li>
+                        <li><strong>b</strong> - <i>bottom</i> - zarovná obrázok na koniec strany.</li>
+                        <li><strong>p</strong> - <i>page</i> - zarovná obrázok na novú stranu.</li>
+                        </ul>
+                       	V hranatých zátvorkách som síce napísal všetky štyri priraďovače, no vždy používame len jeden.<br><br>
+                        
+                        Ďalej TeXu povieme, že chceme obrázok vycentrovať, aký veľký má byť a aký obrázok vkladáme.
+<pre><code>
+\begin{figure}[htbp]
+<strong>
+\centering
+\includegraphics[scale=0.20]{menoobrazku}
+</strong>
+\end{figure}
+</code></pre>
+						Takže len rýchlo vysvetlím - <strong>\centering</strong> hovorí o zarovnaní na stred. Potom <strong>scale
+                        </strong> hovorí o tom koľko krát väčší / menší má obrázok byť v porovnaní so svojou plnou veľkosťou 
+                        (pozor, nutmo použiť desatinnú bodku, s čiarkou to nebude fungovať). Potom už len stačí uviesť 
+                        <strong>menoobrazku</strong> a sme takmer hotoví!<br><br>
+
+                        Posledné čo treba spraviť je vloženie popisku. Takže stačí jednoduchý príkaz a máme to!
+<pre><code>
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.20]{menoobrazku}
+<strong>
+\caption{Náš prvý obrázok v LaTeXu}
+</strong>
+\end{figure}
+</code></pre>
+						Pri vkladaní obrázkov sa vám môže stať, že sa obrázok nezmestí na miesto kde ho chcete a je nutné 
+                       	ho dať až na ďalšiu stranu. Toto je v odborných textoch úplne v poriadku a práve preto sa používajú popisky -
+                       	v texte povieme čo sa na ktorom obrázku nachádza a čitateľ si ho nájde podľa čísla obrázku - no a číslovanie
+                        obrázkov za nás LaTeX spraví sám!<br><br>
+                        
+                        Takže základy sme zvládli! Super! Ak chcete, môžme sa pozrieť na dačo dalšie ;)
 						</p>
 						
 						<a name="double"><h3>Vloženie viacerých obrázkov a ich otočenie</h3></a>
-						
-						<p align="justify">
-							Jakub
-						    </p>
-						</section>
+                        <p align="justify">
+                        Čo tak skúsiť vkladanie viacerých obrázkov naraz alebo dokonca ich otočenie? Nie je problém!<br>
+                        Takže zhruba toto by mal byť výsledok.
+                        </p>
+                        <div align="center">
+                        	<img class="image"src="images/articles/latex_3/double.png" alt="Viacej obrázkov naraz" />
+                        </div>
+                        <h4>Ako na to?</h4>
+                        <p align="justify">
+                        Tu je postup veľmi jednoduchý, stačí pridať druhý príkaz vkladajúci obrázok a povedať LaTeXu
+                        aby jeden z obrázkov otočil. To spravíme tak, že za <i>scale</i> pridáme príkaz <strong>angle=
+                        </strong> a počet stupňov o ktorý chceme obrázok otočiť. Aby obrázky neboli na seba nalepené
+                        použíjeme príkaz <strong>\hspace</strong> - <i>horizontal space</i> - za ktorý dáme do množinových
+                        zátvoriek koľko centimetrov má byť medzi obrázkami medzera.<br><br>
+                        Tu je kód.
+                        </p>
+<pre><code>
+\begin{figure}[h]
+\begin{center}
+<strong>
+\includegraphics[scale=0.15]{menoobrazku}
+\hspace{1cm}
+\includegraphics[scale=0.10, angle=45]{menoobrazku}
+</strong>
+\caption{Viac obrázkov vedľa seba}
+\end{center}
+\end{figure}
+</code></pre>
+          				<p align="justify">
+                        Viac Vám tomu asi k tejto metóde nepoviem ale pre tých naozaj odvážnych tu mám ešte návod na obrázky s obtekaním.
+                        </p>
+                        
+                        <a name="wrap"><h3>Obtekanie obrázku textom</h3></a>
+                        <p align="justify">
+                        V prípade že nepíšeme text s prísnymi pravidlami, nie je problém obrázok zarovnať
+                        na stranu a nechať ho obtiecť textom.<br>
+                        Vyzerať by to malo asi takto.
+                        </p>             
+                        <div align="center">
+                        	<img class="image"src="images/articles/latex_3/wrap.png" alt="Obtekané obrázky" />
+                        </div>
+                        <h4>Ako na to?</h4>
+                        <p align="justify">
+                        S obtekaním si už ale neporadí ani balíček <i>graphicx</i>. Nie je však problém, stačí
+                        zaviesť nový balíček. Ja rád pracujem s <strong>wrapfig</strong>. Zavediemeho starým známym
+                        </p>
+<pre><code>
+\usepackage{wrapfig}
+</code></pre>
+                        <p align="justify">
+                        Asi najjednoduchšie bude Vám ukázať kompletný kód a vysvetliť ho, pretože vôbec nie je náročný.<br>
+                        Vyzerá asi takto.
+                        </p>
+<pre><code>
+...text pred obrázkom, text pred obrázkom.
 
+\begin{wrapfigure}[12]{l}{6cm}
+	\centering
+	\includegraphics[scale=0.5]{menoobrazku}
+\end{wrapfigure}
+
+Text okolo obrázku, text okolo obrázku...
+</code></pre>
+						<p align="justify">
+						<strong>\begin{wrapfigure} ... \end{wrapfigure}</strong> vymedzuje kde sa obrázok bude nachádzať.
+                        Prvá hranatá zátvorka (tá s číslom 12) hovorí <strong>koľko riadkov má byť pre obrázok vynechaných</strong>.
+                        Prvá množinová zátvorka (tá s písmenom l) hovorí na ktorú stranu má byť obrázok zarovnaný (l - left / r
+                        - right) a druhá množinová zátvorka (6 cm) hovorí koľko prietoru obrázok dostane na šírku. Tieto tri zátvorky
+                        však hovoria len o boxíku do ktorého budme obrázok vkladať, nie o obrázku samotnom. Ten ovplyvňujeme tak
+                        ako doteraz v rámci príkazu <i>includegraphics</i>.<br>
+                        Aj pre obtekané obrázky je možné vložiť popisok, ja som sa ho tu len rozhodol nepoužiť.<br><br>
+                        
+                        Myslím, že pre začiatok je toto všetko čo budete potrebovať a ako vždy zvyknem hovoriť, neexistuje nič
+                        čo by sa nedalo vygoogliť ;)<br>
+                        </p>
+                        <p align="justify">
+						Jakub
+						</p>
+					</section>
 				</div>
 			</div>
 			
