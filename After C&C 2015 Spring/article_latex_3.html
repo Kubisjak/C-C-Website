@@ -73,17 +73,46 @@
 				<div class="container">
 					<header class="major">
 						<h2>Vypimpuj svoj dokument obrázkami!</h2>
-						<p>Miro v <a href="article_latex2.html">minulom článku</a> krásne vysvetlil ako sa k LaTeXu správať aby Vás poslúchal a formátoval text tak, ako si prajete. Dnes sa pozrieme na to, ako pridávať do dokumentov obrázky!</p>
+						<p>Miro v <a href="article_latex2.html">minulom článku</a> krásne vysvetlil ako sa k 
+						LaTeXu správať aby Vás poslúchal a formátoval text tak, ako si prajete. Písanie máme zvládnuté ale každému je jasné že obraz vydá za tisíc slov, takže dnes sa pozrieme 
+						na to, ako pridávať do dokumentov obrázky!
+						</p>
 					</header>
 
 					<!-- Content -->
-						<section id="content">
-							<h3>Aj obrázky môžu byť veda</h3>
-							<p align="justify">
-							Než prejdeme k samotnému vkladaniu, povedzme si pár viet o tom ako sa v informačných / odborných správne pracuje s obrázkami. Aby som to nepredlžoval - existuje súbor zaužívaných pravidiel pre obrázky. Naozaj podstatné sú asi dva. Tým najdôležitejším je, že pod každým obrázkom musí byť <strong>popisok</strong> (anglicky <i>caption</i>) a tým  druhým je, že <strong>jedna strana by nemala obsahovať viac ako dva obrázky</strong>, pričom obrázky zaberajú <strong>celú šírku strany</strong>.<br>Vyzbrojení touto znalosťou sa môžme vrhnúť do píísania!</p>
-						    <h3>Príprava je polka úspechu</h3>
-							<p align="justify">
-						    Začnime tým, že si zoberieme pekne predefinovaný dokument podľa Mircovho návodu. Samotný LaTeX však nie je schopný obrázky zvládať ale existuje rada packageov ktoré to dokážu. Ja používam <i>graphicx</i>. Aby sme ho mohli používať stačí si ho pridať do úvodnej deklarácie.</p>
+					<section id="content">
+						<h3>Aj obrázky môžu byť veda</h3>
+						<p align="justify">
+						Než prejdeme k samotnému vkladaniu, povedzme si pár viet o tom ako sa v informačných / 
+						odborných správne pracuje s obrázkami. Aby som to nepredlžoval - existuje súbor zaužívaných 
+						pravidiel pre obrázky. Naozaj podstatné sú asi dva. Tým najdôležitejším je, že pod každým 
+						obrázkom musí byť <strong>popisok</strong> (anglicky <i>caption</i>) a tým  druhým je, že 
+						<strong>jedna strana by nemala obsahovať viac ako dva obrázky</strong>, pričom obrázky zaberajú 
+						<strong>celú šírku strany</strong>. Nič sa však nebojte, o toto všetko sa LaTeX dokáže postarať 
+						takmer sám.<br>Vyzbrojení touto znalosťou sa môžme vrhnúť do píísania!
+						</p>
+						
+						<h3>Akú awesome vec budete schopní spraviť keď si prečítate tento návod?</h3>
+						Dnes som si pre vás pripravil tri jednoduché cvičenia s ktorými obstojíte prakticky pri každej 
+						potrebe vkladania obrázku. Konkrétne sa pozrieme na
+						<ul>
+						<li><a href="#single">Vloženie jedného obrázku</a></li>
+						<li><a href="#double">Vloženie viacerých obrázokov naraz a ich otočenie</a></li>
+						<li><a href="#wrap">Vloženie obrázku obtekaného textom</a></li>
+						</ul>
+						<p align="justify">
+						Takže podme na to!
+						</p>
+						
+						<a name="single"><h3>Vloženie jedného obrázku</h3></a>
+						<p align="justify">
+						Pozrime sa na to čo cheme v tejto časti dosiahnuť. Pôjde o absoútny základ - vloženie jedného 
+						obrázku zaberajúceho celú šírku strany a vloženie popisku. Vyzerať by to malo zhruba takto.</p>
+						<div align="center">	<img class="image"src="images/articles/latex_3/fb_thumbnail.png" alt="Jeden obrázok na šírke strany" />	</div>
+						<h4>Ako na to?</h4>
+						Začnime tým, že si zoberieme pekne predefinovaný dokument podľa Mircovho návodu. Samotný LaTeX 
+						však nie je schopný obrázky zvládať ale existuje rada packageov ktoré to dokážu. Ja používam 
+						<i>graphicx</i>. Aby sme ho mohli používať stačí si ho pridať do úvodnej deklarácie.</p>
 <pre><code>
 \documentclass[a4paper,12pt]{article}  
 \usepackage[utf8]{inputenc}            
@@ -93,11 +122,21 @@
 
 \end{document}
 </code></pre>
-							<h3>3, 2, 1...Obrázky!</h3>
-							<p align="justify">
-							Píšete píšete a nemôže vytvoriť nejaký odstavec? Skúste na koniec vášho odstavca doplniť "\\". Podobne vytvoríte prázdny riadok. Chceli by ste, aby nebol odsadený prvý riadok Vášho odstavca? Použite na jeho začiatku príkaz "\noindent". Ak chcete napísať niečo, čo sa nemá objaviť vo výslednom dokumente - napríklad nejaký komentár, tak použite na začiatku riadku %. 
-							</p>
-							<p align="justify">
+						<p align="justify">
+						Čo sa týka samotného syntaxu, tak ten je veľmi jednoduchý. LaTeXu stačí povedať: "Hej kemo, 
+						<strong>idem vkladať orázok</strong>, ten obrázok má takéto <strong>meno</strong>, chcem aby 
+						mal takúto <strong>veľkosť</strong>" a takýto <strong>popisok</strong>."<br>
+						Všimnite si, že nikde neuvádzame, kde sa obrázok nachádza. Je tomu tak preto, lebo LaTeX
+						predpokladá, že <strong>obrázok sa nachádza v zložke v ktorej máme uložený .tex súbor 
+						zdrojového kôdu dokumentu</strong>. Takže ho tam musíme mať. Taktiež nehovoríme nič o formáte
+						v ktorom je obrázok uložený ale <i>graphicx</i> zvláda všetky základné obrázky ako <i>.jpg</i>,
+						<i>.png</i>, <i>.bmp</i>...<br><br>
+						Takže ako to povedať tak aby LaTeX rozumel? Pre vloženie obrázku používame
+						</p>
+						
+						<a name="double"><h3>Vloženie viacerých obrázkov a ich otočenie</h3></a>
+						
+						<p align="justify">
 							Jakub
 						    </p>
 						</section>
