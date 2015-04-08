@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HowTo - TeX - Part 2</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+	        
+	        <meta property="og:title" content="Prvé krôčiky - píšeme v LaTeXu">
+		<meta property="og:url" content="http://skustoinak.eu/article_latex_2.html">
+		<meta property="og:image" content="http://skustoinak.eu/images/team_skupinoveFoto.jpg">
+		<meta property="og:site_name" content="skustoinak.eu">
+		<meta property="og:type" content="article">
+		<meta property="og:description" content="Ako napísať svoj prvý dokument v LaTeXu.">
+		
+		<LINK REL="shortcut icon" href="images/favicon.ico">
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollex.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="index.html">TeX</a></h1>
+				<nav id="nav">
+					<ul>
+						<!--
+                        <li><a href="index.html">Home</a></li>
+						<li>
+							<a href="">Layouts</a>
+							<ul>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li>
+									<a href="">Submenu</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+										<li><a href="#">Option 4</a></li>
+									</ul>
+							</ul>
+						</li>
+                        -->
+						<li>
+						<a href="archive.html">Archív</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			
+		<!-- Main -->
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<header class="major">
+						<h2>Čo s voľným letom?</h2>
+						<p>Niekedy by sme radi niečo podnikli, no nevieme čo. A pritom možností je naozaj veľa. Problémom je, že o nich často nevieme. Preto som sa rozhodol, že keď na niečo zaujímavé narazím, tak sa o to s radosťou podelím. </p>
+					</header>
+
+					<!-- Content -->
+						<section id="content">
+							
+							              <h3>LEAF</h3>
+							              <p align="justify">
+							              Dnes sa pozrieme na relatívne mladú organizáciu s názvom LEAF. Je to slovenská nezisková organizácia, ktorá sa zameriava na rozvoj mládeže. V súčasnosti sa nazameriavajú iba na stredoškolákov, no ja sa zameriam iba na informácie, ktoré môžu byť pre Vás relevantné.
+							              </p>
+
+                            <p align="justify">
+                            Pre talentovaných stredoškolákov LEAF ponúka program  <a href="http://www.talentguide.sk/">TalentGuide</a>. Cieľom programu je nájsť tvoje silné a slabé stránky, pustiť sa do zaujímavých projektov, začať premýšľať, akým smerom sa dá vybrať po škole. Získaš vlastného mentora, ktorý by Ti mal pomôcť zodpovedať tvoje otázky alebo viesť projekt, do ktorého by si sa rád/a pustil/a. Okrem toho môžeš spoznať podobne zmýšľajúcich ľudí. Momentálne je však prihlasovanie do tohoto projektu uzatvorené. 
+                            
+							<p align="justify">
+                          Ďalším, kvôli ktorému píšem tento článok, je Summer English Camp. Neustále zdôrazňujeme význam angličtiny v dnešných dňoch. Tu dostanete príležitosť zlepšiť si ju počas 19 - dňového medzinárodného letného tábora. Narazil som naň len pred chvíľou, no príhlášky sa môžu podávať <b>len do tejto nedele 12.4.2015!</b> Program je určený pre akčných žiakov 7. – 9. ročníka ZŠ a stredoškolákov, ktorí plánujú zmaturovať v rokoch 2018- 2021. Letné tábory sú zvyčajne celkom drahé. V tomto prípade je to podobne, no účastníci zo Slovenska môžu požiadať o štipendium, ktoré hradí 95% z celej sumy. V konečnom dôsledku platíte 70 €, čo je super suma na 19 dňový tábor. 
+                           </p>
+							
+							<h3>Citát zo stránky programu:</h3>
+                            
+							              <p align="justify">
+                            <i>Koľko Camp stojí? </br>
+
+Účastnícky poplatok za LEAF English Summer Camp je EUR 1400. Všetci študenti, ktorí prejdú výberom do programu sa môžu uchádzať o štipendium.
+
+V LEAF sa snažíme poskytovať vysoko kvalitné programy, dostupné pre talentovaných študentov bez ohľadu na finančnú situáciu rodín, z ktorých pochádzajú. Momentálne sú k dispozícii nasledovné štipendiá:
+
+Študenti sa môžu uchádzať o štipendiá do výšky 95% z účastníckeho poplatku (minimálna cena Camp-u je EUR 70)
+Štipendiá pre výnimočné situácie: V prípadoch hodných osobitného zreteľa si môžu študenti požiadať o štipendium až do výšky 100% ceny Camp-u.
+Všetky štipendiá sa udeľujú úspešným uchádzačom na základe nimi preukázanej potreby. Žiadosti o štipendium budú posúdené na základe čestného prehlásenia rodičov či zákonných zástupcov o socio-ekonomickej situácii študentovej rodiny. Výšku štipendia stanoví na základe týchto informácií LEAF podľa svojho najlepšieho uváženia. Na poskytnutie štipendia v akejkoľvek výške neexistuje právny nárok.
+
+Plná cena Camp-u je EUR 1400 a zahŕňa ubytovanie na 19 dní, kvalitnú stravu šesťkrát denne a intenzívny jazykový program v malých skupinách v podaní viac ako 10 super inštruktorov a ďalších medzinárodných facilitátorov. Náklady na dopravu si študenti hradia z vlastných prostriedkov.</i>
+                            </p>
+    
+
+
+                            <h3>Je to len nápad, za skúšku nič nedáte</h3>
+                            <p align="justify">
+                            Ďalej je to už na Vás. Poriadne si prečítajte, čo Vás čaká v <a href="http://prestudentov.leaf.sk/faq/"> sekcii otázok</a> a na samotnej stránke <a href="http://prestudentov.leaf.sk/">LEAF</a>. Byť na Vašom mieste, skúsil by som sa uchádzať o dané štipendium, za to nič nedáte. A ak by sa to náhodou podarilo, tak získate skvelú skúsenosť do života... Potom dajte vedieť, ako ste dopadli!    
+                            </p>
+
+                            <p align="justify">
+                            Miro
+                            </p>
+                            
+						</section>
+
+				</div>
+			</div>
+			
+			<div class="content" align="center">
+								<a href="archive.html" class="button">Späť na archív</a>
+								<p></p>
+								</div>
+		
+					<!--
+                    <form method="post" action="#" class="container 50%">
+						<div class="row uniform 50%">
+							<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+							<div class="4u$ 12u$(xsmall)"><input type="submit" value="Get Started" class="fit special" /></div>
+						</div>
+					</form>
+                    -->
+				</div>
+			</section>	
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="http://www.facebook.com/workshop.cc" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="mailto:team.ccworkshop@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				
+					<!--
+					<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+					-->
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+	</body>
+</html>
